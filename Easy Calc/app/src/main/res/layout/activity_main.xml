@@ -113,7 +113,7 @@
                 app:layout_constraintStart_toEndOf="@+id/button9" android:layout_marginLeft="8dp"
                 android:layout_marginStart="8dp" android:text="C" android:onClick="onClickDelete"/>
         <Button
-                android:text="/"
+                android:text="÷"
                 android:layout_width="0dp"
                 android:layout_height="0dp" android:id="@+id/buttonDiv"
                 android:background="@color/colorLightBlue"
@@ -165,7 +165,7 @@
                 app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.474"
                 app:layout_constraintStart_toEndOf="@+id/button0"
                 app:layout_constraintEnd_toStartOf="@+id/buttonPlus"
-        />
+                android:onClick="onClickEqual"/>
         <Button
                 android:text="-"
                 android:layout_width="0dp"
