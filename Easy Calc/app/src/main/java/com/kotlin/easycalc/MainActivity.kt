@@ -34,7 +34,6 @@ class MainActivity : AppCompatActivity() {
 
     fun onClickEqual(view: View) {
         val aritArray = textView.text.split("(?<=[+\\-÷*])|(?=[+\\-÷*])".toRegex()).toMutableList()
-        println(aritArray)
 
         if (aritArray.size > 3) {
             if (aritArray[0].isEmpty() && aritArray[1] == "-" && aritArray[2].isNumber()) {
@@ -47,7 +46,6 @@ class MainActivity : AppCompatActivity() {
                 aritArray.removeAt(3)
             }
         }
-        println(aritArray)
 
         if (aritArray.isNotEmpty()) {
             if (aritArray.size != 3) {
