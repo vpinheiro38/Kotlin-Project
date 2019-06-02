@@ -95,22 +95,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun onClickDelete(view: View) {
-        textView.text = remLastChar(textView.text.toString())
-        if (textView.text.isNotEmpty() && textView.text.last() == ' ')
-            textView.text = remLastChar(textView.text.toString())
+        textView.text = ""
     }
 
     private fun applyExp(str: String) : String {
         val strSplit = str.split('E')
 
         return (strSplit[0].toFloat() * 10f.pow(strSplit[1].toFloat())).toString()
-    }
-
-    private fun remLastChar(str: String) : String {
-        when(str.isNotEmpty()) {
-            true -> return str.substring(0, str.lastIndex)
-            false -> return ""
-        }
     }
 }
 
