@@ -16,8 +16,7 @@
             app:layout_constraintBottom_toTopOf="@+id/constraintLayout" app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintVertical_bias="1.0">
         <TextView
-                android:text="TextView"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:id="@+id/textView" android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
@@ -34,8 +33,8 @@
                 android:scrollHorizontally="true"
                 android:ellipsize="marquee"
                 android:marqueeRepeatLimit="marquee_forever" android:scrollbarAlwaysDrawHorizontalTrack="false"
-                android:scrollbarAlwaysDrawVerticalTrack="false" android:layout_gravity="right"
-                android:gravity="center"/>
+                android:scrollbarAlwaysDrawVerticalTrack="false"
+                android:gravity="center" android:layout_gravity="end"/>
     </HorizontalScrollView>
     <android.support.constraint.ConstraintLayout
             android:layout_width="0dp"
