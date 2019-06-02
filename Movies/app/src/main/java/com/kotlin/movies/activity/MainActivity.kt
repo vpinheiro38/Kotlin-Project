@@ -3,15 +3,12 @@ package com.kotlin.movies.activity
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.support.v7.widget.CardView
 import android.view.View
-import android.widget.Button
 import android.widget.Toast
 import com.kotlin.movies.MoviesRepository
 import com.kotlin.movies.*
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.list_card_view.view.*
-
+import kotlinx.android.synthetic.main.activity_movie.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -19,12 +16,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        loadSpinner.visibility = View.VISIBLE
+
         val moviesRepository = MoviesRepository.getInstance()
 
         moviesRepository.getMovies(object : OnGetMoviesCallback {
             override fun onSuccess(movies: List<Movie>) {
                 val adapter = MoviesAdapter(movies, callback)
                 recyclerView.adapter = adapter
+                loadSpinner.visibility = View.GONE
             }
 
             override fun onError() {

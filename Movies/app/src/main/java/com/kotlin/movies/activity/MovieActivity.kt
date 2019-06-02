@@ -10,11 +10,9 @@ import com.bumptech.glide.Glide
 import com.kotlin.movies.*
 import kotlinx.android.synthetic.main.activity_movie.*
 
-
 class MovieActivity: AppCompatActivity() {
 
     private var movieId: Int = 0
-
     private var moviesRepository: MoviesRepository? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,7 +28,7 @@ class MovieActivity: AppCompatActivity() {
                 val toolbar: Toolbar = findViewById(R.id.action_bar)
                 toolbar.title = movie.title
                 if (movie.overview == "")
-                    txtViewDesc.text = "Descrição não encontrada"
+                    txtViewDesc.text = "Descrição não encontrada para esse idioma"
                 else
                     txtViewDesc.text = movie.overview
                 if (!isFinishing) {
